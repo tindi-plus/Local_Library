@@ -3,8 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# exclude keys
+# exclude keys and
 keys.py
+
+#  Visual Studio extension
+*.vscode
 
 # C extensions
 *.so
