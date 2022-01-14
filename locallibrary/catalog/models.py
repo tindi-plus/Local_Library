@@ -88,6 +88,18 @@ class Book(models.Model):
             url: a url for accessing details about this book object
         """        
         return reverse('book-detail', args=[str(self.id)])
+    
+    def display_genre(self):
+        """
+        Create a string for the Genre. This is required to display genre in Admin.
+
+        Returns:
+            str: The names of the first 3 genres in the book object if they exist
+        """    
+        return ', '.join([genre.name for genre in self.genre.all()[:3]])    
+
+    display_genre.short_description = 'Genre'
+
 
 
 import uuid # Required for unique book instances
