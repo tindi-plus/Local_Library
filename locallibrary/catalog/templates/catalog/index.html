@@ -1,5 +1,10 @@
 {% extends 'catalog/base_generic.html' %}
 
+<!--This is replacing the {block title} in the base_generic.html -->
+{% block title %}
+<title>Local Library Home Page</title>
+{% endblock %}
+
 <!--This is replacing the {block content} in the base_generic.html -->
 {% block content %}
 
@@ -14,6 +19,8 @@
     <li><strong>Copies: </strong>{{num_instances}}</li>
     <li><strong>Copies Available: </strong>{{num_instances_available}}</li>
     <li><strong>Authors: </strong>{{num_authors}}</li>
+    <li><strong>Genre: </strong>{{num_genre}}</li>
+    <li><strong>Books with "The": </strong>{{the_books}}</li>
 </ul>
 
 

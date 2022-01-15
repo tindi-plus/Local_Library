@@ -100,6 +100,9 @@ class Book(models.Model):
 
     display_genre.short_description = 'Genre'
 
+    class meta:
+        ordering = ['title']
+
 
 
 import uuid # Required for unique book instances
