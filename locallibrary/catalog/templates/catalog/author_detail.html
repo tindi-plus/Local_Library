@@ -1,5 +1,13 @@
 {% extends 'catalog/base_generic.html'%}
 
+{% block sidebar %}
+
+{{block.super}}
+<p><a href="{% url 'author-update' author.pk %}">Update Author</a></p>
+<p><a href="{% url 'author-delete' author.pk %}">Delete Author</a></p>
+
+{%endblock%} 
+
 {% block content %}
     <h1>Name: {{author.last_name}}, {{author.first_name}}</h1>
 

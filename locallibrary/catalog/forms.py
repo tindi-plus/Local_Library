@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 class RenewBookForm(forms.Form):
     """
     Provides a user with the ability to renew a book that has been borrowed by
-    modifying the due_back field. The new data must not be a past value and must not be
+    modifying the due_back field. The new date must not be a past value and must not be
     more than 3 weeks into the future.
 
     Args:
@@ -33,3 +33,4 @@ class RenewBookForm(forms.Form):
         
         # the cleaned data must always be returned
         return data
+

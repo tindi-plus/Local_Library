@@ -1,5 +1,12 @@
 {% extends 'catalog/base_generic.html' %}
 
+{% block sidebar %}
+{{block.super}}
+<p><a href="{% url 'book-update' book.pk %}">Update Book</a></p>
+<p><a href="{% url 'book-delete' book.pk %}">Delete Book</a></p>
+
+{%endblock%}
+
 {% block content %}
 
     <h1>Title: {{book.title}}</h1>
